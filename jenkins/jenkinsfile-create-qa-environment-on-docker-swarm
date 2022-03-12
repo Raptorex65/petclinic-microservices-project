@@ -3,7 +3,7 @@ pipeline {
     environment {
         PATH=sh(script:"echo $PATH:/usr/local/bin", returnStdout:true).trim()
         APP_NAME="petclinic"
-        APP_STACK_NAME="Matt-$APP_NAME-App-QA-44"
+        APP_STACK_NAME="Trex-$APP_NAME-App-QA-${BUILD_NUMBER}"
         AWS_REGION="us-east-1"
         CFN_KEYPAIR="matt-${APP_NAME}-qa.key"
         CFN_TEMPLATE="./infrastructure/qa-docker-swarm-infrastructure-cfn-template.yml"
