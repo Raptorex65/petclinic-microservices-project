@@ -3,13 +3,8 @@ pipeline {
     environment {
         PATH=sh(script:"echo $PATH:/usr/local/bin", returnStdout:true).trim()
         APP_NAME="petclinic"
-<<<<<<< HEAD
-        APP_STACK_NAME="Callet-${APP_NAME}-app-${BUILD_NUMBER}"
-        APP_REPO_NAME="claruswayset-repo/${APP_NAME}-app-dev"
-=======
         APP_STACK_NAME="Pet-Nightly-${APP_NAME}-app-${BUILD_NUMBER}"
         APP_REPO_NAME="Pet-Nightly-repo/${APP_NAME}-app-dev"
->>>>>>> feature/msp-17
         AWS_ACCOUNT_ID=sh(script:'export PATH="$PATH:/usr/local/bin" && aws sts get-caller-identity --query Account --output text', returnStdout:true).trim()
         AWS_REGION="us-east-1"
         ECR_REGISTRY="${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
