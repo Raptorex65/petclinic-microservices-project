@@ -1,12 +1,12 @@
 nodes:
-  - address: 3.233.239.202
-    internal_address: 172.31.66.236
+  - address: 52.90.132.143
+    internal_address: 172.31.30.140
     user: ubuntu
     role:
       - controlplane
       - etcd
       - worker
-
+# address ve internal addres rancher server'in public ve private adresi
 # ignore_docker_version: true
 
 services:
@@ -19,6 +19,7 @@ ssh_key_path: ~/.ssh/call-rancher.pem
 
 # Required for external TLS termination with
 # ingress-nginx v0.22+
+# Nginx'in onunde baska bir loadbalancer varsa use-f-h'nin true olmasi lazim.
 ingress:
   provider: nginx
   options:
