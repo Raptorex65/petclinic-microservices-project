@@ -13,7 +13,7 @@ metadata:
   name: api-gateway
 spec:
   rules:
-    - host: '{{ .values.dns_name }}'
+    - host: '{{ .Values.DNS_NAME }}'
       http:
         paths:
           - backend:
