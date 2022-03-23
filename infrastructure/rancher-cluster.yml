@@ -1,6 +1,6 @@
 nodes:
-  - address: 3.233.239.202
-    internal_address: 172.31.66.236
+  - address: 3.222.215.141
+    internal_address: 172.31.6.57
     user: ubuntu
     role:
       - controlplane
