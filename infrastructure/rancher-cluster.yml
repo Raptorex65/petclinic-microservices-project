@@ -1,11 +1,6 @@
 nodes:
-<<<<<<< HEAD
   - address: 52.90.132.143
     internal_address: 172.31.30.140
-=======
-  - address: 3.222.215.141
-    internal_address: 172.31.6.57
->>>>>>> feature/msp-24
     user: ubuntu
     role:
       - controlplane
