@@ -1,7 +1,12 @@
 PATH="$PATH:/usr/local/bin"
 APP_NAME="petclinic"
+<<<<<<< HEAD
 CFN_KEYPAIR="matt-${APP_NAME}-qa.key"
 APP_STACK_NAME="Trex-$APP_NAME-App-QA-${BUILD_NUMBER}"
+=======
+CFN_KEYPAIR="Permanent-Weekly-${APP_NAME}-qa.key"
+APP_STACK_NAME="Trex-Permanent-$APP_NAME-App-QA-${BUILD_NUMBER}"
+>>>>>>> feature/msp-18
 export ANSIBLE_PRIVATE_KEY_FILE="${JENKINS_HOME}/.ssh/${CFN_KEYPAIR}"
 export ANSIBLE_HOST_KEY_CHECKING=False
 sed -i "s/APP_STACK_NAME/$APP_STACK_NAME/" ./ansible/inventory/qa_stack_dynamic_inventory_aws_ec2.yaml
